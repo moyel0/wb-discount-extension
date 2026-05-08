@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "WB Discount Calculator",
+  "version": "1.0.0",
+  "description": "Калькулятор точного процента скидки для продавцов на wildberries.ru. Введите сумму продажи и желаемую сумму — получите процент, который нужно отнять.",
+  "default_locale": "ru",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "WB Discount Calculator",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.wildberries.ru/*",
+        "https://wildberries.ru/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"]
+}
