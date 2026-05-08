@@ -3,7 +3,6 @@
   "name": "WB Discount Calculator",
   "version": "1.0.0",
   "description": "Калькулятор точного процента скидки для продавцов на wildberries.ru. Введите сумму продажи и желаемую сумму — получите процент, который нужно отнять.",
-  "default_locale": "ru",
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
